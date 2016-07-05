@@ -16,10 +16,21 @@ RSpec.feature 'Navigation options' do
     end
   end
 
-  describe "not a teacher or admin" do
-    xit "does not a display a nav bar" do
-      expect(page).not_to have_content("Welcome, #{teacher.email}")
-      expect(page).not_to have_content("Signed in successfully.")
+  describe "logged in student" do
+    it "does not a display a nav bar" do
+      login(student)
+
+      expect(page).not_to have_content("Grove Monitor")
+      expect(page).not_to have_content("Grove Playlist")
+    end
+  end
+
+  describe "guest user" do
+    it "does not a display a nav bar" do
+      visit '/'
+
+      expect(page).not_to have_content("Grove Monitor")
+      expect(page).not_to have_content("Grove Playlist")
     end
   end
 

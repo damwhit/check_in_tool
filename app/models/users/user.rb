@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   :validatable#, :omniauthable
   belongs_to :school
   belongs_to :grove
+
+  def teacher?
+    self.class == Teacher
+  end
 end
