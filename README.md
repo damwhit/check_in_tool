@@ -1,5 +1,7 @@
 # Roots Check in Tool
 
+This repo has been moved to [here](https://github.com/rootselementary/check_in_tool_rails)
+
 ### Run locally
 
 Clone repo: `git clone https://github.com/damwhit/check_in_tool.git`
